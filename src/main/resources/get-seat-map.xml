@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+    <SOAP-ENV:Header>
+        <eb:MessageHeader SOAP-ENV:mustUnderstand="1" eb:version="1.0">
+            <eb:From>
+                <eb:PartyId>947263</eb:PartyId>
+            </eb:From>
+            <eb:To>
+                <eb:PartyId />
+            </eb:To>
+            <eb:CPAId>O23K</eb:CPAId>
+            <eb:ConversationId>${conversation-id}</eb:ConversationId>
+            <eb:Service>ACS_FlightSeatMapRQ</eb:Service>
+            <eb:Action>ACS_FlightSeatMapRQ</eb:Action>
+
+        </eb:MessageHeader>
+        <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+            <wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">${binaryToken}</wsse:BinarySecurityToken>
+        </wsse:Security>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+
+        <ACS_FlightSeatMapRQ>
+            <FlightInfo>
+                <Airline>${airline}</Airline>
+                <Flight>${flight}</Flight>
+                <BookingClass>${bookingClass}</BookingClass>
+                <DepartureDate>${departureDate}</DepartureDate>
+                <Origin>${origin}</Origin>
+            </FlightInfo>
+        </ACS_FlightSeatMapRQ>
+
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

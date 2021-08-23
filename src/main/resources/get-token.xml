@@ -1,0 +1,31 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+    <soap-env:Header>
+        <eb:MessageHeader soap-env:mustUnderstand="1" eb:version="1.0.0">
+            <eb:From>
+                <eb:PartyId>947263</eb:PartyId>
+            </eb:From>
+            <eb:To>
+                <eb:PartyId />
+            </eb:To>
+            <eb:CPAId>O23K</eb:CPAId>
+            <eb:ConversationId>123000234999992344.tf</eb:ConversationId>
+            <eb:Service>SessionCreateRQ</eb:Service>
+            <eb:Action>SessionCreateRQ</eb:Action>
+        </eb:MessageHeader>
+        <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/12/utility">
+            <wsse:UsernameToken>
+                <wsse:Username>947263</wsse:Username>
+                <wsse:Password>WS428859</wsse:Password>
+                <Organization>O23K</Organization>
+                <Domain>AA</Domain>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soap-env:Header>
+    <soap-env:Body>
+        <sws:SessionCreateRQ xmlns:sws="http://webservices.sabre.com" Version="1.0.0">
+            <POS>
+                <Source PseudoCityCode="O23K" />
+            </POS>
+        </sws:SessionCreateRQ>
+    </soap-env:Body>
+</soap-env:Envelope>
